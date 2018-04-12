@@ -10,16 +10,16 @@ public class verificador extends main {
 	main pai;
 
 	public void valorLinha(int linhaJogada) {
-		if (linhaJogada > 2) {
+		if (linhaJogada > 7) {
 			do {
 				System.out.println("Digite outra Linha:");
 				linhaJogada = jogada.nextInt();
 				
-				if(linhaJogada > 2){
+				if(linhaJogada > 7){
 					System.out.println("Linha Inválida !!!");
 				}
 				
-			} while (linhaJogada > 2);
+			} while (linhaJogada > 7);
 		}
 	}
 

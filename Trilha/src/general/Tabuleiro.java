@@ -13,7 +13,7 @@ public class Tabuleiro extends main {
 			if (i == 3) {
 				System.out.print(Arrays.deepToString(matrix[i]));
 			} else {
-				System.out.println(Arrays.deepToString(matrix[i]));
+				System.out.println("     " + Arrays.deepToString(matrix[i]));
 			}
 		}
 	}
