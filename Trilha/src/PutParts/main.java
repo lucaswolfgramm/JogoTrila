@@ -1,7 +1,9 @@
 package PutParts;
-import java.util.Arrays;
+
+//import java.util.Arrays;
 import java.util.Scanner;
 
+import general.Tabuleiro;
 import general.verificador;
 
 public class main {
@@ -10,11 +12,12 @@ public class main {
 
 		Scanner jogada = new Scanner(System.in);
 		verificador verifica = new verificador();
+		Tabuleiro tabuleiro = new Tabuleiro();
 
 		String[][] matrix = { { "0", "0", "0" }, { "0", "0", "0" }, { "0", "0", "0" }, { "0", "0", "0" },
-				{ "0", "0", "0" }, { "0", "0", "0" }, { "0", "0", "0" } };
+				{ "0", "0", "0" }, { "0", "0", "0" }, { "0", "0", "0" }, { "0", "0", "0" } };
 
-		System.out.println(Arrays.deepToString(matrix));
+		tabuleiro.mostrarTabuleiro(matrix);
 
 		for (int line = 0; line < 17; line++) {
 			int linhaJogada;
@@ -33,22 +36,23 @@ public class main {
 				System.out.println("Digite a Linha:");
 				linhaJogada = jogada.nextInt();
 				linhaJogada = linhaJogada - 1;
-				
+
 				verifica.valorLinha(linhaJogada);
 
 				System.out.println("Digite a Coluna:");
 				colunaJogada = jogada.nextInt();
 				colunaJogada = colunaJogada - 1;
-				
+
 				verifica.valorColuna(colunaJogada);
-				
-				if(matrix[linhaJogada][colunaJogada] != "0"){
+
+				if (matrix[linhaJogada][colunaJogada] != "0") {
 					System.out.println("Campo Indisponível, tente novamente !!!");
 				}
 			} while (matrix[linhaJogada][colunaJogada] != "0");
 
 			matrix[linhaJogada][colunaJogada] = jogador;
-			System.out.println(Arrays.deepToString(matrix));
+
+			tabuleiro.mostrarTabuleiro(matrix);
 		}
 	}
 }
