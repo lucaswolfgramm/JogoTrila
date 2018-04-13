@@ -2,11 +2,7 @@ package general;
 
 import java.util.Arrays;
 
-import PutParts.main;
-
-public class Tabuleiro extends main {
-
-	main main = new main();
+public class Tabuleiro {
 
 	public void mostrarTabuleiro(String matrix[][]) {
 		for (int i = 0; i < matrix.length; i++) {
