@@ -48,4 +48,5 @@ public class Verificador {
 		}
 		return colunaJogada;
 	}
+
 }
