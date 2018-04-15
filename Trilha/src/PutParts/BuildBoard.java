@@ -1,7 +1,9 @@
 package PutParts;
 
 import java.util.Scanner;
+
 import general.Tabuleiro;
+import general.VerificaTrilha;
 import general.Verificador;
 
 public class BuildBoard {
@@ -11,9 +13,10 @@ public class BuildBoard {
 
 	public void buildBoard() {
 
-		Scanner pegar = new Scanner(System.in);
+		Scanner ler = new Scanner(System.in);
 		Verificador verifica = new Verificador();
 		Tabuleiro tabuleiro = new Tabuleiro();
+		VerificaTrilha verificaTrilha = new VerificaTrilha();
 
 		tabuleiro.mostrarTabuleiro(matrix);
 
@@ -26,13 +29,13 @@ public class BuildBoard {
 
 			do {
 				System.out.println("Digite a Linha:");
-				linhaJogada = pegar.nextInt();
+				linhaJogada = ler.nextInt();
 				linhaJogada = linhaJogada - 1;
 
 				linhaJogada = verifica.valorLinha(linhaJogada);
 
 				System.out.println("Digite a Coluna:");
-				colunaJogada = pegar.nextInt();
+				colunaJogada = ler.nextInt();
 				colunaJogada = colunaJogada - 1;
 
 				colunaJogada = verifica.valorColuna(colunaJogada);
@@ -46,6 +49,8 @@ public class BuildBoard {
 
 			tabuleiro.mostrarTabuleiro(matrix);
 			
+			verificaTrilha.verificaTrilha(matrix[linhaJogada][colunaJogada], linhaJogada, colunaJogada, jogador);
+
 		}
 	}
 }

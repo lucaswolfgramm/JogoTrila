@@ -14,36 +14,27 @@ public class Graph<E> {
 		List<Path<E>> allPaths = findAllPaths(source, dest);
 		Path<E> result = allPaths.get(0);
 		for (Path<E> path : allPaths) {
-			if(path.getWeight().compareTo(result.getWeight()) < 0) {
+			if (path.getWeight().compareTo(result.getWeight()) < 0) {
 				result = path;
 			}
 		}
 		return result;
 	}
-	
+
 	public Path<E> findShortestPathLambda(Vertex<E> source, Vertex<E> dest) {
 		List<Path<E>> allPaths = findAllPaths(source, dest);
 
-		return allPaths
-				.stream()
-				.min((a,b) -> a.getWeight().compareTo(b.getWeight()))
-				.get();
-	}	
-	
-	public List<Path<E>> findAllPaths(
-			Vertex<E> source, 
-			Vertex<E> target) {
-		
+		return allPaths.stream().min((a, b) -> a.getWeight().compareTo(b.getWeight())).get();
+	}
+
+	public List<Path<E>> findAllPaths(Vertex<E> source, Vertex<E> target) {
+
 		List<Path<E>> paths = new LinkedList<Path<E>>();
 		findPaths(source, null, target, paths, new Path<E>());
 		return paths;
 	}
 
-	private void findPaths(
-			Vertex<E> current,
-			Vertex<E>.Edge currentEdge, 
-			Vertex<E> target, 
-			List<Path<E>> paths,
+	private void findPaths(Vertex<E> current, Vertex<E>.Edge currentEdge, Vertex<E> target, List<Path<E>> paths,
 			Path<E> path) {
 
 		if (current.equals(target)) {
@@ -59,11 +50,9 @@ public class Graph<E> {
 
 		path.getVertices().remove(currentEdge);
 
-	}	
-	
-	public boolean hasPath(
-			Vertex<E> source, 
-			Vertex<E> destination) {
+	}
+
+	public boolean hasPath(Vertex<E> source, Vertex<E> destination) {
 
 		Set<Vertex<E>> visited = new HashSet<>();
 		Queue<Vertex<E>> queue = new LinkedList<>();
@@ -85,7 +74,7 @@ public class Graph<E> {
 			}
 		}
 		return false;
-	}	
+	}
 
 	public void traverse(Vertex<E> source) {
 		Set<Vertex<E>> visited = new HashSet<>();
@@ -105,8 +94,8 @@ public class Graph<E> {
 				}
 			}
 		}
-	}	
-	
+	}
+
 	public Vertex<E> addVertex(E value) {
 		Vertex<E> vertex = new Vertex<>(value);
 		vertices.add(vertex);
