@@ -32,7 +32,7 @@ public class RemovePiece {
 			} else {
 				System.out.println("Campo Indisponível, tente novamente !!!");
 			}
-			
+
 		} while (matrix[linhaJogada][colunaJogada] == "0" && matrix[linhaJogada][colunaJogada] == jogador);
 	}
 }

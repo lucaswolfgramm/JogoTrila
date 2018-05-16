@@ -14,7 +14,7 @@ public class InsertVerification {
 			System.out.println("Peça Preta (x) :");
 			jogador = "x";
 		} else {
-			System.out.println("Peça Branca (o) :");
+			//System.out.println("Peça Branca (o) :");
 			jogador = "o";
 		}
 		return jogador;
