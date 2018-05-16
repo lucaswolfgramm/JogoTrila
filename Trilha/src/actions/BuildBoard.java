@@ -1,11 +1,11 @@
-package PutParts;
+package actions;
 
 import java.util.Scanner;
 
-import general.GravarRemover;
 import general.Tabuleiro;
-import general.Verificador;
-import general.VerificarTrilha;
+import general.bot;
+import verifications.InsertVerification;
+import verifications.VerificarTrilha;
 
 public class BuildBoard {
 
@@ -21,10 +21,11 @@ public class BuildBoard {
 	public void buildBoard() {
 
 		Scanner ler = new Scanner(System.in);
-		Verificador verifica = new Verificador();
+		InsertVerification verifica = new InsertVerification();
 		Tabuleiro tabuleiro = new Tabuleiro();
 		GravarRemover gravarRemover = new GravarRemover();
 		VerificarTrilha verificaTrilha = new VerificarTrilha();
+		bot bot = new bot();
 
 		tabuleiro.mostrarTabuleiro(matrix);
 
@@ -35,38 +36,46 @@ public class BuildBoard {
 
 			jogador = verifica.buscarJogador(line, jogador);
 
-			do {
-				System.out.println("Digite a Linha:");
-				linhaJogada = ler.nextInt();
-				linhaJogada = linhaJogada - 1;
+			if (jogador == "o") {
+				linhaJogada = 0;
+				colunaJogada = 0;
+				bot.robotPlayer(linhaJogada, colunaJogada, matrix);
+			}
 
-				linhaJogada = verifica.valorLinha(linhaJogada);
+			if (jogador == "x") {
+				do {
+					System.out.println("Digite a Linha:");
+					linhaJogada = ler.nextInt();
+					linhaJogada = linhaJogada - 1;
 
-				System.out.println("Digite a Coluna:");
-				colunaJogada = ler.nextInt();
-				colunaJogada = colunaJogada - 1;
+					linhaJogada = verifica.valorLinha(linhaJogada);
 
-				colunaJogada = verifica.valorColuna(colunaJogada);
+					System.out.println("Digite a Coluna:");
+					colunaJogada = ler.nextInt();
+					colunaJogada = colunaJogada - 1;
 
-				if (matrix[linhaJogada][colunaJogada] != "0") {
-					System.out.println("Campo Indisponível, tente novamente !!!");
-				}
-			} while (matrix[linhaJogada][colunaJogada] != "0");
+					colunaJogada = verifica.valorColuna(colunaJogada);
 
-			matrix[linhaJogada][colunaJogada] = jogador;
+					if (matrix[linhaJogada][colunaJogada] != "0") {
+						System.out.println("Campo Indisponível, tente novamente !!!");
+					}
+				} while (!matrix[linhaJogada][colunaJogada].equals("0"));
+
+				matrix[linhaJogada][colunaJogada] = jogador;
+				gravarRemover.gravaValorJogada(linhaJogada, colunaJogada, jogador);
+			}
 
 			tabuleiro.mostrarTabuleiro(matrix);
-
-			gravarRemover.gravaValorJogada(linhaJogada, colunaJogada, jogador);
 
 			// tabuleiro.mostrarTabuleiroIndividualX(gravarRemover.getObtidoJogadorX());
 			// tabuleiro.mostrarTabuleiroIndividualO(gravarRemover.getObtidoJogadorO());
 
 			cont++;
 
-			if (cont >= 4) {
-				verificaTrilha.verificaTrilha(obtidoJogadorO, obtidoJogadorX);
-			}
+			// if (cont >= 5) {
+			// verificaTrilha.verificaTrilha(obtidoJogadorO, obtidoJogadorX, jogador,
+			// matrix);
+			// }
 		}
 
 	}

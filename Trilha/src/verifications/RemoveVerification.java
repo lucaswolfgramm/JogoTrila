@@ -2,12 +2,10 @@ package verifications;
 
 import java.util.Scanner;
 
-import actions.BuildBoard;
-
-public class InsertVerification {
+public class RemoveVerification {
 
 	Scanner pegar = new Scanner(System.in);
-	BuildBoard build = new BuildBoard();
+	// BuildBoard build = new BuildBoard();
 
 	public String buscarJogador(int line, String jogador) {
 		if (line % 2 == 0) {

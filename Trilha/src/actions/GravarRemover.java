@@ -1,6 +1,6 @@
-package general;
+package actions;
 
-import PutParts.BuildBoard;
+import general.Tabuleiro;
 
 public class GravarRemover {
 

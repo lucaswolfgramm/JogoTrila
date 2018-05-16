@@ -1,4 +1,6 @@
-package PutParts;
+package general;
+
+import actions.BuildBoard;
 
 public class main {
 
