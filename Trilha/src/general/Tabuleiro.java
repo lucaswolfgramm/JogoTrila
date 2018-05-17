@@ -9,6 +9,10 @@ public class Tabuleiro {
 		System.out.println();
 		System.out.println("_____________________");
 		for (int i = 0; i < matrix.length; i++) {
+			String zero = "0";
+			if(i == 0) {
+				System.out.print("|" + Arrays.deepToString(matrix[i][0]));
+			}
 			
 			if (i == 3) {
 				System.out.print("| " + Arrays.deepToString(matrix[i]));

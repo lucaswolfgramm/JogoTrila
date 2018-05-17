@@ -63,10 +63,8 @@ public class BuildBoard {
 
 				matrix[linhaJogada][colunaJogada] = jogador;
 				gravarRemover.gravaValorJogada(linhaJogada, colunaJogada, jogador);
-				//tabuleiro.mostrarTabuleiro(matrix);
+				// tabuleiro.mostrarTabuleiro(matrix);
 			}
-
-			
 
 			// tabuleiro.mostrarTabuleiroIndividualX(gravarRemover.getObtidoJogadorX());
 			// tabuleiro.mostrarTabuleiroIndividualO(gravarRemover.getObtidoJogadorO());
