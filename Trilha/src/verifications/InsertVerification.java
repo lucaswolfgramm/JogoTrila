@@ -25,14 +25,15 @@ public class InsertVerification {
 			do {
 				System.out.println("Digite outra Linha:");
 				linhaJogada = pegar.nextInt();
-
+				linhaJogada = linhaJogada - 1;
+				
 				if (linhaJogada > 7) {
 					System.out.println("Linha Inválida !!!");
 				}
 
 			} while (linhaJogada > 7);
 		}
-		return linhaJogada-1;
+		return linhaJogada;
 	}
 
 	public int valorColuna(int colunaJogada) {
@@ -40,14 +41,16 @@ public class InsertVerification {
 			do {
 				System.out.println("Digite outra Coluna:");
 				colunaJogada = pegar.nextInt();
-
+				colunaJogada = colunaJogada - 1;
+				
+				
 				if (colunaJogada > 2) {
 					System.out.println("Coluna Inválida !!!");
 				}
 
 			} while (colunaJogada > 2);
 		}
-		return colunaJogada-1;
+		return colunaJogada;
 	}
 
 }

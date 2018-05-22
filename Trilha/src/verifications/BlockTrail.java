@@ -66,11 +66,11 @@ public class BlockTrail {
 
 			countTrialForLine = 0;
 			countLine++;
-		}
+		}*/
 
 		if (countAllTrial != 0) {
 			matrix[fieldLine][fieldColumn] = "o";
 			jogou = true;
-		} */
+		} 
 	}
 }
