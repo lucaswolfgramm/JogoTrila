@@ -32,7 +32,7 @@ public class InsertVerification {
 
 			} while (linhaJogada > 7);
 		}
-		return linhaJogada;
+		return linhaJogada-1;
 	}
 
 	public int valorColuna(int colunaJogada) {
@@ -47,7 +47,7 @@ public class InsertVerification {
 
 			} while (colunaJogada > 2);
 		}
-		return colunaJogada;
+		return colunaJogada-1;
 	}
 
 }

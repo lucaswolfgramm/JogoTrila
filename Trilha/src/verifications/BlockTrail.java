@@ -42,10 +42,11 @@ public class BlockTrail {
 		}
 
 		// procura vertical
+		/*
 		for (int i = 0; i < 23; i++) {
 
-			int line = TrialVertical[i][i];
-			int column = TrialVertical[i][1];			
+			int line = TrialVertical[i][i]-1;
+			int column = TrialVertical[i][1]-1;			
 
 			if (matrix[line][column].equals("x")) {
 				countTrialForLine++;
@@ -70,6 +71,6 @@ public class BlockTrail {
 		if (countAllTrial != 0) {
 			matrix[fieldLine][fieldColumn] = "o";
 			jogou = true;
-		}
+		} */
 	}
 }
