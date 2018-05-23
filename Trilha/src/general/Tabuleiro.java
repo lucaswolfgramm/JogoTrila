@@ -15,21 +15,14 @@ public class Tabuleiro {
 //		}
 		
 		System.out.println();
-		System.out.println("_____________________");
+		System.out.println("______________________");
 		for (int i = 0; i < matrix.length; i++) {
 			String zero = "0";
-//			if(i == 0) {
-//				System.out.print("|" + Arrays.deepToString(matrix[i]1
-//						1));
-//			}
 			
-			if (i == 3) {
-				System.out.print("| " + Arrays.deepToString(matrix[i]));
-			} else {
-				System.out.println("|    " + Arrays.deepToString(matrix[i]));
-			}
+			System.out.println("| " + Arrays.deepToString(matrix[i]));
+
 		}
-		System.out.println("_____________________");
+		System.out.println("______________________");
 		System.out.println();
 		System.out.println();
 	}

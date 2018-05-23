@@ -5,14 +5,14 @@ public class BlockTrail {
 	public void searchTrailForBlock(String[][] matrix, boolean jogou) {
 
 		// Conjuntos de linhas/colunas possíveis para obter trilha
-		int[][] TrialVertical = { { 1, 1 }, { 4, 1 }, { 8, 1 },
-								  { 2, 1 }, { 4, 2 }, { 7, 1 },
-								  { 3, 1 }, { 4, 2 }, { 6, 1 },
-								  { 1, 2 }, { 2, 2 }, { 3, 2 },
-								  { 6, 2 }, { 7, 2 }, { 8, 2 }, 
-								  { 3, 3 }, { 5, 1 }, { 6, 3 }, 
-								  { 2, 3 }, { 5, 2 }, { 7, 3 },
-								  { 1, 3 }, { 5, 3 }, { 8, 3 } };
+		int[][] TrialVertical = { { 1, 1 }, { 4, 1 }, { 7, 1 },
+								  { 2, 2 }, { 4, 2 }, { 6, 2 },
+								  { 3, 3 }, { 4, 3 }, { 5, 3 },
+								  { 1, 4 }, { 2, 4 }, { 3, 4 },
+								  { 5, 4 }, { 6, 4 }, { 7, 4 }, 
+								  { 3, 5 }, { 4, 5 }, { 5, 5 }, 
+								  { 2, 6 }, { 4, 6 }, { 5, 6 },
+								  { 1, 7 }, { 4, 7 }, { 7, 7 } };
 
 		int countTrialForLine = 0;
 		int countAllTrial = 0;
@@ -23,7 +23,7 @@ public class BlockTrail {
 		// procura na horizontal
 		for (int line = 0; line < matrix.length; line++) {
 			for (int column = 0; column < matrix[line].length; column++) {
-				if (matrix[line][column] == "x") {
+				if (matrix[line][column].equals("x")) {
 					countTrialForLine++;
 				}
 
