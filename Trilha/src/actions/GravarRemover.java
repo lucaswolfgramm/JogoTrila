@@ -103,9 +103,9 @@ public class GravarRemover {
 				}
 				if (colunaJogada == 4) {
 					if (jogador == "x") {
-						build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "3";
+						build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "4";
 					} else {
-						build.getObtidoJogadorO()[linhaJogada][colunaJogada] = "3";
+						build.getObtidoJogadorO()[linhaJogada][colunaJogada] = "4";
 					}
 				}
 				if (colunaJogada == 5) {

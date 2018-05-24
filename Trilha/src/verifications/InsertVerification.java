@@ -53,7 +53,7 @@ public class InsertVerification {
 			}
 			if (colunaOK == false) {
 				do {
-					if (colunaJogada == linha0e6[linhaJogada][colunaJogada]) {
+					if (colunaJogada != linha0e6[linhaJogada][colunaJogada]) {
 						System.out.println("Digite outra Coluna:");
 						colunaJogada = pegar.nextInt();
 						colunaJogada = colunaJogada - 1;
@@ -72,10 +72,15 @@ public class InsertVerification {
 			}
 			if (colunaOK == false) {
 				do {
-					if (colunaJogada == linha1e5[0][0]) {
-						System.out.println("Digite outra Coluna:");
-						colunaJogada = pegar.nextInt();
-						colunaJogada = colunaJogada - 1;
+					System.out.println("Digite outra Coluna:");
+					colunaJogada = pegar.nextInt();
+					colunaJogada = colunaJogada - 1;
+					
+					for (int i = 0; i < linha1e5.length; i++) {
+						if (colunaJogada == linha1e5[0][i]) {
+							colunaOK = true;
+							break;
+						}
 					}
 
 				} while (colunaOK == false);

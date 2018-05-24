@@ -62,7 +62,7 @@ public class BuildBoard {
 					colunaJogada = ler.nextInt();
 					colunaJogada = colunaJogada - 1;
 
-					colunaJogada = verifica.valorColuna(colunaJogada, linhaJogada);
+					//colunaJogada = verifica.valorColuna(colunaJogada, linhaJogada);
 
 					if (!matrix[linhaJogada][colunaJogada].equals("0")) {
 						System.out.println("Campo Indisponível, tente novamente !!!");
