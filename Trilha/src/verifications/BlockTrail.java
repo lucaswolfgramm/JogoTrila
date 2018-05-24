@@ -27,14 +27,17 @@ public class BlockTrail {
 					countTrialForLine++;
 				}
 
-				if (countAllTrial == 0 & matrix[line][column].equals("0")) {
-					fieldLine = line;
-					fieldColumn = column;
-				}
-
-				if (column == 2) {
-					if (countTrialForLine == 2) {
-						countAllTrial++;
+				if (!matrix[line][column].equals(" ")) {
+					
+					if (countAllTrial == 0 & matrix[line][column].equals("0")) {
+						fieldLine = line;
+						fieldColumn = column;
+					}
+	
+					if (column == 2) {
+						if (countTrialForLine == 2) {
+							countAllTrial++;
+						}
 					}
 				}
 			}
