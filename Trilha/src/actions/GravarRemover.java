@@ -124,62 +124,6 @@ public class GravarRemover {
 				}
 			}
 		}
-		/*
-		if (jogador == "o") {
-			if (linhaJogada == 0 || linhaJogada == 6) {
-				if (colunaJogada == 0) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "0";
-				}
-				if (colunaJogada == 3) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "3";
-				}
-				if (colunaJogada == 6) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "6";
-				}
-			}
-			if (linhaJogada == 1 || linhaJogada == 5) {
-				if (colunaJogada == 1) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "1";
-				}
-				if (colunaJogada == 3) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "3";
-				}
-				if (colunaJogada == 5) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "5";
-				}
-			}
-			if (linhaJogada == 2 || linhaJogada == 4) {
-				if (colunaJogada == 2) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "2";
-				}
-				if (colunaJogada == 3) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "3";
-				}
-				if (colunaJogada == 4) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "4";
-				}
-			}
-			if (linhaJogada == 3) {
-				if (colunaJogada == 0) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "0";
-				}
-				if (colunaJogada == 1) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "1";
-				}
-				if (colunaJogada == 2) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "2";
-				}
-				if (colunaJogada == 4) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "4";
-				}
-				if (colunaJogada == 5) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "5";
-				}
-				if (colunaJogada == 6) {
-					build.getObtidoJogadorX()[linhaJogada][colunaJogada] = "6";
-				}
-			}
-		}*/
 	}
 
 }
